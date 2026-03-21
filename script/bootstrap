@@ -1,0 +1,13 @@
+#!/bin/sh
+# script/bootstrap: install project dependencies
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+if [ -f "package.json" ]; then
+  echo "==> Installing Node.js dependencies..."
+  npm install
+fi
+
+echo "==> Done. You're ready to go!"
